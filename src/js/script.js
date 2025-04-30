@@ -90,6 +90,7 @@ const select = {
       thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
       thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+      thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
     }
     initAccordion(){
       const thisProduct = this;
@@ -143,11 +144,11 @@ const select = {
 
       /* convert from form to object */
       const formData = utils.serializeFormToObject(thisProduct.form);
-      console.log("formData: ", formData);
+      //console.log("formData: ", formData);
 
       /* set price to default price */
       let price = thisProduct.data.price;
-      console.log(thisProduct);
+      //console.log(thisProduct);
 
       /* for every category (param)... */
       for(let paramId in thisProduct.data.params){
@@ -157,13 +158,26 @@ const select = {
 
         /* for every option in this category... */
         for(let optionId in param.options) {
+          
+          const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+
+          const image = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
+          //console.log(image);
+          if(optionSelected && image){
+            image.classList.add(classNames.menuProduct.imageVisible);
+            //console.log(image);
+          }
+          else if(!optionSelected && image){
+            image.classList.remove(classNames.menuProduct.imageVisible); 
+          }
+
           /* ...determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true } */
           const option = param.options[optionId];
-          if(formData[paramId].includes(optionId) && !option.default){
+          if(optionSelected && !option.default){
             price += option.price;
             //console.log("znaleziono! :", option)
           }
-          else if(!formData[paramId].includes(optionId) && option.default){
+          else if(!optionSelected && option.default){
             price -= option.price;
           }
           //console.log(optionId, option);
