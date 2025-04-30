@@ -216,9 +216,9 @@ const select = {
     setValue(value){
       const thisWidget = this;
       const newValue = parseInt(value);
-      
+
       /* Add validation */
-      if(thisWidget.value !== newValue && !isNaN(newValue)){
+      if(thisWidget.value !== newValue && !isNaN(newValue) && newValue > 0 && newValue <= 10){
         thisWidget.value = newValue;
         console.log(thisWidget.value);      
       }
