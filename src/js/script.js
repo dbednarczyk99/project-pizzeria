@@ -96,8 +96,11 @@ const select = {
     }
     initAmountWidget(){
       const thisProduct = this;
-
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+
+      thisProduct.amountWidgetElem.addEventListener('updated', function(){
+        thisProduct.processOrder();
+      });
     }
     initAccordion(){
       const thisProduct = this;
@@ -190,6 +193,9 @@ const select = {
           //console.log(optionId, option);
         }
       }
+      
+      /* multiply price by amount */
+      price *= thisProduct.amountWidget.value;
       /* update calculated price in the HTML */
       thisProduct.priceElem.innerHTML = price;
     }
@@ -213,6 +219,11 @@ const select = {
       thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     }
+    announce(){
+      const thisWidget = this;
+      const event = new Event('updated');
+      thisWidget.element.dispatchEvent(event);
+    }
     setValue(value){
       const thisWidget = this;
       const newValue = parseInt(value);
@@ -220,7 +231,8 @@ const select = {
       /* Add validation */
       if(thisWidget.value !== newValue && !isNaN(newValue) && newValue > 0 && newValue <= 10){
         thisWidget.value = newValue;
-        console.log(thisWidget.value);      
+        console.log(thisWidget.value);
+        thisWidget.announce();
       }
 
       thisWidget.input.value = thisWidget.value;
