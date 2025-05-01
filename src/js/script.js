@@ -242,9 +242,10 @@
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
 
-      console.log('AmountWidget: ', thisWidget);
-      console.log('constructor arguments: ', element);
+      //console.log('AmountWidget: ', thisWidget);
+      //console.log('constructor arguments: ', element);
     }
+
     getElements(element){
       const thisWidget = this;
 
@@ -253,11 +254,13 @@
       thisWidget.linkDecrease = thisWidget.element.querySelector(select.widgets.amount.linkDecrease);
       thisWidget.linkIncrease = thisWidget.element.querySelector(select.widgets.amount.linkIncrease);
     }
+
     announce(){
       const thisWidget = this;
       const event = new Event('updated');
       thisWidget.element.dispatchEvent(event);
     }
+
     setValue(value){
       const thisWidget = this;
       const newValue = parseInt(value);
@@ -265,12 +268,12 @@
       /* Add validation */
       if(thisWidget.value !== newValue && !isNaN(newValue) && newValue > 0 && newValue <= 10){
         thisWidget.value = newValue;
-        console.log(thisWidget.value);
+        //console.log(thisWidget.value);
         thisWidget.announce();
       }
-
       thisWidget.input.value = thisWidget.value;
     }
+
     initActions(){
       const thisWidget = this;
 
@@ -290,10 +293,37 @@
     }
   }
 
+  class Cart{
+    constructor(element){
+      const thisCart = this;
+      thisCart.products = [];
+      thisCart.getElements(element);
+      thisCart.initActions();
+      console.log('new Cart: ', thisCart);
+    }
+
+    getElements(element){
+      const thisCart = this;
+      thisCart.dom = {};
+      thisCart.dom.wrapper = element;
+      thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
+    }
+
+    initActions(){
+      const thisCart = this;
+
+      thisCart.dom.toggleTrigger.addEventListener('click', function(event){
+        event.preventDefault();
+        //console.log(thisCart.dom.wrapper);
+        thisCart.dom.wrapper.classList.toggle(classNames.cart.wrapperActive);
+      });
+    }
+  }
+
   const app = {
     initMenu: function(){
       const thisApp = this;
-      console.log('thisApp.data: ', thisApp.data);
+      //console.log('thisApp.data: ', thisApp.data);
 
       for(let productData in thisApp.data.products){
         new Product(productData, thisApp.data.products[productData]);
@@ -317,7 +347,14 @@
 
       thisApp.initData();
       thisApp.initMenu();
+      thisApp.initCart();
     },
+    initCart: function(){
+      const thisApp = this;
+
+      const cartElem = document.querySelector(select.containerOf.cart);
+      thisApp.cart = new Cart(cartElem);
+    }
   };
 
   app.init();
