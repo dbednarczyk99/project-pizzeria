@@ -374,6 +374,10 @@
       thisCart.dom.subtotalPrice = thisCart.dom.wrapper.querySelector(select.cart.subtotalPrice);
       thisCart.dom.totalPrice = thisCart.dom.wrapper.querySelectorAll(select.cart.totalPrice);
       thisCart.dom.totalNumber = thisCart.dom.wrapper.querySelector(select.cart.totalNumber);
+      thisCart.dom.form = thisCart.dom.wrapper.querySelector(select.cart.form);
+      thisCart.dom.address = thisCart.dom.wrapper.querySelector(select.cart.address);
+      thisCart.dom.phone = thisCart.dom.wrapper.querySelector(select.cart.phone);
+
     }
 
     initActions(){
@@ -392,21 +396,46 @@
       thisCart.dom.productList.addEventListener('remove', function(event){
         thisCart.remove(event.detail.cartProduct);
       });
+
+      thisCart.dom.form.addEventListener('submit', function(event){
+        event.preventDefault();
+        thisCart.sendOrder();
+      });
+    }
+
+    sendOrder(){
+      const thisCart = this;
+
+      const url = settings.db.url + '/' + settings.db.orders;
+
+      const payload = {
+        address: thisCart.dom.address.value,
+        phone: thisCart.dom.phone.value,
+        totalPrice: thisCart.totalPrice,
+        subtotalPrice: thisCart.totalPrice - settings.cart.defaultDeliveryFee,
+        totalNumber: thisCart.totalNumber,
+        deliveryFee: settings.cart.defaultDeliveryFee,
+      }
+
+      console.log('payload: ', payload);
+      console.log(url);
+      console.log(thisCart.products);
     }
 
     update(){
       const thisCart = this;
       let deliveryFee = 0;
 
-      let totalNumber = 0;
+      //let totalNumber = 0;
       let subtotalPrice = 0;
+      thisCart.totalNumber = 0;
 
       for (let product of thisCart.products){
-        totalNumber += product.amount;
+        thisCart.totalNumber += product.amount;
         subtotalPrice += product.price;
       }
 
-      if(totalNumber === 0 && subtotalPrice === 0){
+      if(thisCart.totalNumber === 0 && subtotalPrice === 0){
         deliveryFee = 0;      }
       else{
         deliveryFee = settings.cart.defaultDeliveryFee;
@@ -416,7 +445,7 @@
       
       thisCart.dom.subtotalPrice.innerHTML = subtotalPrice;
       thisCart.dom.deliveryFee.innerHTML = deliveryFee;
-      thisCart.dom.totalNumber.innerHTML = totalNumber;
+      thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
       for(let totalPrice of thisCart.dom.totalPrice){
         totalPrice.innerHTML = thisCart.totalPrice;
       }
