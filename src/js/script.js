@@ -415,11 +415,33 @@
         subtotalPrice: thisCart.totalPrice - settings.cart.defaultDeliveryFee,
         totalNumber: thisCart.totalNumber,
         deliveryFee: settings.cart.defaultDeliveryFee,
+        products: []
       }
 
-      console.log('payload: ', payload);
-      console.log(url);
-      console.log(thisCart.products);
+      for(let prod of thisCart.products){
+        //console.log('prod.getData(): ', prod.getData());
+        payload.products.push(prod.getData());
+      }
+
+      //console.log('payload: ', payload);
+      //console.log(url);
+      //console.log(thisCart.products);
+
+      const transferOptions = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      };
+
+      fetch(url, transferOptions)
+        .then(function(rawResponse){
+          return rawResponse.json();
+        })
+        .then(function(parsedREsponse){
+          console.log(parsedREsponse)
+        });
     }
 
     update(){
@@ -566,6 +588,24 @@
 
         //console.log('remove clicked!');
       })
+    }
+
+    getData(){
+      const thisCartProduct = this;
+
+      //const params = {};      
+
+      const productData = {
+        id: thisCartProduct.id,
+        name: thisCartProduct.name,
+        price: thisCartProduct.price,
+        priceSingle: thisCartProduct.priceSingle,
+        amount: thisCartProduct.amount,
+        params: thisCartProduct.params,
+      };
+
+      return productData;
+
     }
   }
 
