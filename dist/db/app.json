@@ -206,17 +206,17 @@
     {
       "address": "Rogatka 8/1",
       "phone": "+48 789233684",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
+      "totalPrice": 38,
+      "subtotalPrice": 18,
+      "totalNumber": 2,
       "deliveryFee": 20,
       "products": [
         {
           "id": "cake",
           "name": "Zio Stefano's Doughnut",
-          "price": 9,
+          "price": 18,
           "priceSingle": 9,
-          "amount": 1,
+          "amount": 2,
           "params": {}
         }
       ],
@@ -225,17 +225,17 @@
     {
       "address": "Rogatka 8/1",
       "phone": "+48 789233684",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
+      "totalPrice": 38,
+      "subtotalPrice": 18,
+      "totalNumber": 2,
       "deliveryFee": 20,
       "products": [
         {
           "id": "cake",
           "name": "Zio Stefano's Doughnut",
-          "price": 9,
+          "price": 18,
           "priceSingle": 9,
-          "amount": 1,
+          "amount": 2,
           "params": {}
         }
       ],
@@ -244,18 +244,33 @@
     {
       "address": "Rogatka 8/1",
       "phone": "+48 789233684",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
+      "totalPrice": 47,
+      "subtotalPrice": 27,
+      "totalNumber": 3,
       "deliveryFee": 20,
       "products": [
         {
           "id": "cake",
           "name": "Zio Stefano's Doughnut",
+          "price": 18,
+          "priceSingle": 9,
+          "amount": 2,
+          "params": {}
+        },
+        {
+          "id": "breakfast",
+          "name": "Zia Giulia's Breakfast",
           "price": 9,
           "priceSingle": 9,
           "amount": 1,
-          "params": {}
+          "params": {
+            "coffee": {
+              "label": "Coffee type",
+              "options": {
+                "latte": "Latte"
+              }
+            }
+          }
         }
       ],
       "id": 3
@@ -269,304 +284,11 @@
       "deliveryFee": 20,
       "products": [
         {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 4
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "+48 789233684",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 5
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "+48 789233684",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 6
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "+48 789233684",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 7
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "+48 789233684",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 8
-    },
-    {
-      "address": "Łąkta Górna",
-      "phone": "+48 789233684",
-      "totalPrice": 32,
-      "subtotalPrice": 12,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "pizza",
-          "name": "Nonna Alba's Pizza",
-          "price": 12,
-          "priceSingle": 12,
-          "amount": 1,
-          "params": {
-            "sauce": {
-              "label": "Sauce",
-              "options": {
-                "cream": "Sour cream"
-              }
-            },
-            "toppings": {
-              "label": "Toppings",
-              "options": {}
-            },
-            "crust": {
-              "label": "pizza crust",
-              "options": {
-                "standard": "standard"
-              }
-            }
-          }
-        }
-      ],
-      "id": 9
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "Łąkta Górna",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 10
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "Łąkta Górna",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 11
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "Łąkta Górna",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 12
-    },
-    {
-      "address": "kraków",
-      "phone": "123456789",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
           "id": "salad",
           "name": "Nonno Alberto's Salad",
-          "price": 18,
+          "price": 9,
           "priceSingle": 9,
-          "amount": 2,
+          "amount": 1,
           "params": {
             "ingredients": {
               "label": "Ingredients",
@@ -580,194 +302,7 @@
           }
         }
       ],
-      "id": 13
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "kraków",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 14
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "kraków",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 15
-    },
-    {
-      "address": "Rogatka 8/1",
-      "phone": "kraków",
-      "totalPrice": 38,
-      "subtotalPrice": 18,
-      "totalNumber": 2,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 16
-    },
-    {
-      "address": "warszawa",
-      "phone": "999999999",
-      "totalPrice": 56,
-      "subtotalPrice": 36,
-      "totalNumber": 3,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "salad",
-          "name": "Nonno Alberto's Salad",
-          "price": 36,
-          "priceSingle": 12,
-          "amount": 3,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "tomatoes": "Tomatoes",
-                "olives": "Olives",
-                "feta": "Feta cheese",
-                "cheese": "Cheese",
-                "herbs": "Fresh herbs",
-                "pepper": "Black pepper"
-              }
-            }
-          }
-        }
-      ],
-      "id": 17
-    },
-    {
-      "address": "warszawa",
-      "phone": "999999999",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 18
-    },
-    {
-      "address": "warszawa",
-      "phone": "999999999",
-      "totalPrice": 47,
-      "subtotalPrice": 27,
-      "totalNumber": 3,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        },
-        {
-          "id": "breakfast",
-          "name": "Zia Giulia's Breakfast",
-          "price": 18,
-          "priceSingle": 9,
-          "amount": 2,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "macchiato": "Macchiato "
-              }
-            }
-          }
-        }
-      ],
-      "id": 19
+      "id": 4
     }
   ]
 }
