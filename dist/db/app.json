@@ -7,7 +7,7 @@
       "price": 9,
       "description": "Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
       "images": [
-        "<img class=\"active\" src=\"images/doughnut.svg\">"
+        "\u003Cimg class=\"active\" src=\"images/doughnut.svg\"\u003E"
       ]
     },
     {
@@ -17,7 +17,7 @@
       "price": 9,
       "description": "There's no better way to start your day than indulging yourself with a cup of fresh Italian coffee and crispy waffels. Made just for you on the spot, this breakfast combo has been our guests' favorite for over 50 years.",
       "images": [
-        "<img class=\"active\" src=\"images/breakfast.svg\">"
+        "\u003Cimg class=\"active\" src=\"images/breakfast.svg\"\u003E"
       ],
       "params": {
         "coffee": {
@@ -51,15 +51,15 @@
       "price": 20,
       "description": "The true taste of Italy &ndash; homemade pizza as prepared by our grandmothers in old-fashoned brick ovens. Choose your favorite topping and enjoy your comfort food! All ingredients come straight from eco-friendly, trusted farms in the Italian countryside.",
       "images": [
-        "<img class=\"active\" src=\"images/pizza/crust.svg\">",
-        "<img class=\"sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\">",
-        "<img class=\"sauce-cream\" src=\"images/pizza/sour-cream.svg\">",
-        "<img class=\"toppings-salami\" src=\"images/pizza/salami.svg\">",
-        "<img class=\"toppings-olives\" src=\"images/pizza/olives.svg\">",
-        "<img class=\"toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\">",
-        "<img class=\"toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\">",
-        "<img class=\"toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\">",
-        "<img class=\"toppings-basil\" src=\"images/pizza/basil.svg\">"
+        "\u003Cimg class=\"active\" src=\"images/pizza/crust.svg\"\u003E",
+        "\u003Cimg class=\"sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\"\u003E",
+        "\u003Cimg class=\"sauce-cream\" src=\"images/pizza/sour-cream.svg\"\u003E",
+        "\u003Cimg class=\"toppings-salami\" src=\"images/pizza/salami.svg\"\u003E",
+        "\u003Cimg class=\"toppings-olives\" src=\"images/pizza/olives.svg\"\u003E",
+        "\u003Cimg class=\"toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\"\u003E",
+        "\u003Cimg class=\"toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\"\u003E",
+        "\u003Cimg class=\"toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\"\u003E",
+        "\u003Cimg class=\"toppings-basil\" src=\"images/pizza/basil.svg\"\u003E"
       ],
       "params": {
         "sauce": {
@@ -151,14 +151,14 @@
       "price": 9,
       "description": "A delicious salad made of fresh, home-grown products on a crispy lettuce base.",
       "images": [
-        "<img class=\"active\" src=\"images/salad/plate.svg\">",
-        "<img class=\"ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
-        "<img class=\"ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
-        "<img class=\"ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
-        "<img class=\"ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
-        "<img class=\"ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
-        "<img class=\"ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
-        "<img class=\"ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
+        "\u003Cimg class=\"active\" src=\"images/salad/plate.svg\"\u003E",
+        "\u003Cimg class=\"ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\"\u003E",
+        "\u003Cimg class=\"ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\"\u003E",
+        "\u003Cimg class=\"ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\"\u003E",
+        "\u003Cimg class=\"ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\"\u003E",
+        "\u003Cimg class=\"ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\"\u003E",
+        "\u003Cimg class=\"ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\"\u003E",
+        "\u003Cimg class=\"ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\"\u003E"
       ],
       "params": {
         "ingredients": {
@@ -202,127 +202,16 @@
       }
     }
   ],
+
   "orders": [
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 1
-    },
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 2
-    },
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 3
-    },
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 4
-    },
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 5
-    },
-    {
-      "address": "",
-      "phone": "hgjg",
-      "totalPrice": 29,
-      "subtotalPrice": 9,
-      "totalNumber": 1,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "name": "Zio Stefano's Doughnut",
-          "price": 9,
-          "priceSingle": 9,
-          "amount": 1,
-          "params": {}
-        }
-      ],
-      "id": 6
-    }
+
   ],
+
   "events": [
     {
       "id": 1,
       "date": "2025-05-09",
-      "hour": "12:30",
+      "hour": "11:30",
       "table": 1,
       "repeat": false,
       "duration": 4,
@@ -331,33 +220,27 @@
     },
     {
       "id": 2,
-      "date": "2025-05-11",
+      "date": "2025-05-2",
       "hour": "16:00",
       "table": 3,
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": [
-        "bread",
-        "lemonWater"
-      ]
+      "starters": ["bread", "lemonWater"]
     },
     {
       "id": 3,
-      "date": "2025-05-18",
+      "date": "2025-05-2",
       "hour": "12:00",
       "table": 3,
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": [
-        "bread",
-        "lemonWater"
-      ]
+      "starters": ["bread", "lemonWater"]
     },
     {
       "id": 4,
-      "date": "2025-05-16",
+      "date": "2025-05-2",
       "hour": "13:00",
       "table": 2,
       "repeat": "daily",
@@ -367,16 +250,25 @@
     },
     {
       "id": 5,
-      "date": "2025-06-01",
+      "date": "2025-05-2",
       "hour": "18:00",
       "table": 2,
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": [
-        "lemonWater"
-      ]
+      "starters": ["lemonWater"]
     }
   ],
-  "bookings": []
+
+  "bookings": [
+    {
+      "id": 1,
+      "date": "2025-05-10",
+      "hour": "16:00",
+      "table": 1,
+      "duration": 3,
+      "ppl": 4,
+      "starters": ["water"]
+    }
+  ]
 }

@@ -90,6 +90,7 @@
     booking: {
       loading: 'loading',
       tableBooked: 'booked',
+      tableSelected: 'selected',
     },
 
     nav: {
