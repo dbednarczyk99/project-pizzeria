@@ -2,6 +2,7 @@
 
   import Product from './components/Product.js';
   import Cart from './components/Cart.js';
+  import Booking from './components/Booking.js';
   
   const app = {
     initPages: function(){
@@ -13,11 +14,14 @@
       const idFromHash = window.location.hash.substring(2);
       //console.log(idFromHash);
 
-       let useId = thisApp.pages[0].id;
-       for(let page of thisApp.pages){
-         if(page.id === idFromHash) useId = idFromHash; break;
-       }
-
+      let useId = thisApp.pages[0].id;
+      for(let page of thisApp.pages){
+        if(page.id === idFromHash) {
+          useId = page.id; 
+          break;
+        }
+      }
+      //console.log(useId);
       thisApp.activatePage(useId);
 
       for(let link of thisApp.navLinks){
@@ -86,6 +90,13 @@
       console.log('thisApp.data', JSON.stringify(thisApp.data));
     },
 
+    initBooking: function(){
+      const thisApp = this;
+
+      const bookingElem = document.querySelector(select.containerOf.booking);
+      thisApp.booking = new Booking(bookingElem);
+    },
+
     init: function(){
       const thisApp = this;
       console.log('*** App starting ***');
@@ -97,6 +108,7 @@
       thisApp.initData();
       thisApp.initCart();
       thisApp.initPages();
+      thisApp.initBooking();
     },
 
     initCart: function(){
