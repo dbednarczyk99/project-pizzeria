@@ -50,6 +50,8 @@
       peopleAmount: '.people-amount',
       hoursAmount: '.hours-amount',
       tables: '.floor-plan .table',
+      form: '.booking-form',
+      checkbox: 'input[type="checkbox"]',
     },
 
     nav: {

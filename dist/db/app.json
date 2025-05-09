@@ -7,7 +7,7 @@
       "price": 9,
       "description": "Treat yourself with this soft, freshly baked cookie. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
       "images": [
-        "\u003Cimg class=\"active\" src=\"images/doughnut.svg\"\u003E"
+        "<img class=\"active\" src=\"images/doughnut.svg\">"
       ]
     },
     {
@@ -17,7 +17,7 @@
       "price": 9,
       "description": "There's no better way to start your day than indulging yourself with a cup of fresh Italian coffee and crispy waffels. Made just for you on the spot, this breakfast combo has been our guests' favorite for over 50 years.",
       "images": [
-        "\u003Cimg class=\"active\" src=\"images/breakfast.svg\"\u003E"
+        "<img class=\"active\" src=\"images/breakfast.svg\">"
       ],
       "params": {
         "coffee": {
@@ -51,15 +51,15 @@
       "price": 20,
       "description": "The true taste of Italy &ndash; homemade pizza as prepared by our grandmothers in old-fashoned brick ovens. Choose your favorite topping and enjoy your comfort food! All ingredients come straight from eco-friendly, trusted farms in the Italian countryside.",
       "images": [
-        "\u003Cimg class=\"active\" src=\"images/pizza/crust.svg\"\u003E",
-        "\u003Cimg class=\"sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\"\u003E",
-        "\u003Cimg class=\"sauce-cream\" src=\"images/pizza/sour-cream.svg\"\u003E",
-        "\u003Cimg class=\"toppings-salami\" src=\"images/pizza/salami.svg\"\u003E",
-        "\u003Cimg class=\"toppings-olives\" src=\"images/pizza/olives.svg\"\u003E",
-        "\u003Cimg class=\"toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\"\u003E",
-        "\u003Cimg class=\"toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\"\u003E",
-        "\u003Cimg class=\"toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\"\u003E",
-        "\u003Cimg class=\"toppings-basil\" src=\"images/pizza/basil.svg\"\u003E"
+        "<img class=\"active\" src=\"images/pizza/crust.svg\">",
+        "<img class=\"sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\">",
+        "<img class=\"sauce-cream\" src=\"images/pizza/sour-cream.svg\">",
+        "<img class=\"toppings-salami\" src=\"images/pizza/salami.svg\">",
+        "<img class=\"toppings-olives\" src=\"images/pizza/olives.svg\">",
+        "<img class=\"toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\">",
+        "<img class=\"toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\">",
+        "<img class=\"toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\">",
+        "<img class=\"toppings-basil\" src=\"images/pizza/basil.svg\">"
       ],
       "params": {
         "sauce": {
@@ -151,14 +151,14 @@
       "price": 9,
       "description": "A delicious salad made of fresh, home-grown products on a crispy lettuce base.",
       "images": [
-        "\u003Cimg class=\"active\" src=\"images/salad/plate.svg\"\u003E",
-        "\u003Cimg class=\"ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\"\u003E",
-        "\u003Cimg class=\"ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\"\u003E",
-        "\u003Cimg class=\"ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\"\u003E",
-        "\u003Cimg class=\"ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\"\u003E",
-        "\u003Cimg class=\"ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\"\u003E",
-        "\u003Cimg class=\"ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\"\u003E",
-        "\u003Cimg class=\"ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\"\u003E"
+        "<img class=\"active\" src=\"images/salad/plate.svg\">",
+        "<img class=\"ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
+        "<img class=\"ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
+        "<img class=\"ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
+        "<img class=\"ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
+        "<img class=\"ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
+        "<img class=\"ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
+        "<img class=\"ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
       ],
       "params": {
         "ingredients": {
@@ -202,11 +202,16 @@
       }
     }
   ],
-
   "orders": [
-
+    {
+      "address": "",
+      "phone": "",
+      "subtotalPrice": null,
+      "deliveryFee": 20,
+      "products": [],
+      "id": 1
+    }
   ],
-
   "events": [
     {
       "id": 1,
@@ -226,7 +231,10 @@
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": ["bread", "lemonWater"]
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
     },
     {
       "id": 3,
@@ -236,7 +244,10 @@
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": ["bread", "lemonWater"]
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
     },
     {
       "id": 4,
@@ -256,10 +267,11 @@
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,
-      "starters": ["lemonWater"]
+      "starters": [
+        "lemonWater"
+      ]
     }
   ],
-
   "bookings": [
     {
       "id": 1,
@@ -268,7 +280,364 @@
       "table": 1,
       "duration": 3,
       "ppl": 4,
-      "starters": ["water"]
+      "starters": [
+        "water"
+      ]
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 2,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 2
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 2,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 3
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 4
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 5
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 6
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 7
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 8
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 9
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 10
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 11
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 12
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 13
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 14
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 15
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 16
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 17
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 18
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 19
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [],
+      "phone": "",
+      "addres": "",
+      "id": 20
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 21
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water",
+        "bread"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 22
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "bread"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 23
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 24
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water",
+        "bread"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 25
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": "2",
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water",
+        "bread"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 26
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": null,
+      "duration": 2,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 27
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "12:00",
+      "table": 2,
+      "duration": 2,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 28
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "16:30",
+      "table": 1,
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 29
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "15:00",
+      "table": 3,
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 30
+    },
+    {
+      "date": "2025-05-09",
+      "hour": "16:00",
+      "table": 1,
+      "duration": 1,
+      "ppl": 1,
+      "starters": [
+        "water"
+      ],
+      "phone": "",
+      "addres": "",
+      "id": 31
     }
   ]
 }

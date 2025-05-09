@@ -137,11 +137,14 @@ class Booking{
             }
             if(!allAvailable && thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableId)){
                 table.classList.add(classNames.booking.tableBooked);
-                console.log('table: ',table);
+                //console.log('table: ',table);
             } else {
                 table.classList.remove(classNames.booking.tableBooked);
             }
+            table.classList.remove(classNames.booking.tableSelected);
         }
+        thisBooking.tableSelected = '';
+        //console.log(thisBooking.tableSelected);
     }
 
     render(element){
@@ -161,6 +164,14 @@ class Booking{
 
         thisBooking.dom.tables = thisBooking.dom.wrapper.querySelectorAll(select.booking.tables);
         thisBooking.dom.allTables = thisBooking.dom.wrapper.querySelector('.floor-plan');
+
+        thisBooking.dom.address = thisBooking.dom.wrapper.querySelector(select.cart.address);
+        thisBooking.dom.phone = thisBooking.dom.wrapper.querySelector(select.cart.phone);
+        thisBooking.dom.form = thisBooking.dom.wrapper.querySelector(select.booking.form);
+
+        thisBooking.dom.checkbox = thisBooking.dom.wrapper.querySelectorAll(select.booking.checkbox);
+
+
     }
 
     initTables(element){
@@ -176,16 +187,14 @@ class Booking{
                     table.classList.toggle(classNames.booking.tableSelected);
                 }
             }
-
             element.classList.toggle(classNames.booking.tableSelected);
-
         }
     }
 
     initWidgets(){
         const thisBooking = this;
         thisBooking.peopleAmountWidget = new AmountWidget(thisBooking.dom.peopleAmount);
-        thisBooking.peopleHoursWidget = new AmountWidget(thisBooking.dom.hoursAmount);
+        thisBooking.hoursAmountWidget = new AmountWidget(thisBooking.dom.hoursAmount);
 
         thisBooking.datePickerWidget = new DatePicker(thisBooking.dom.datePicker);
         thisBooking.hourPickerWidget = new HourPicker(thisBooking.dom.hourPicker);
@@ -197,7 +206,7 @@ class Booking{
         });
         thisBooking.dom.hoursAmount.addEventListener('updated', function(event){
             event.preventDefault();
-            thisBooking.hoursAmount = thisBooking.peopleHoursWidget.value;
+            thisBooking.hoursAmount = thisBooking.hoursAmountWidget.value;
             //console.log(thisBooking.hoursAmount);
         });
 
@@ -216,11 +225,62 @@ class Booking{
             event.preventDefault();
             if(event.target.classList.contains('table')){
                 thisBooking.initTables(event.target);
-                console.log('table clicked!: ', event.target);
+                //console.log('table clicked!: ', event.target);
             }
+        });
 
+        //console.log(thisBooking.dom);
+        thisBooking.dom.form.addEventListener('submit', function(event){
+            event.preventDefault();
+            thisBooking.sendBooking();
         })
     }
+
+    sendBooking(){
+        const thisBooking = this;
+  
+        const url = settings.db.url + '/' + settings.db.bookings;
+  
+        const payload = {
+          date: thisBooking.datePickerWidget.value,
+          hour: thisBooking.hourPickerWidget.value,
+          table: parseInt(thisBooking.tableSelected),
+          duration: parseInt(thisBooking.hoursAmountWidget.value),
+          ppl: parseInt(thisBooking.peopleAmountWidget.value),
+          starters: [],
+          phone: thisBooking.dom.address.value,
+          addres: thisBooking.dom.phone.value,
+        }
+    
+        console.log(thisBooking.dom);
+        //payload.starters.push(prod.getData());
+        for(let option of thisBooking.dom.checkbox){
+            if(option.checked) payload.starters.push(option.value);
+        }
+        console.log(payload.starters);
+
+
+        //console.log('payload: ', payload);
+        //console.log(url);
+        //console.log(thisCart.products);
+  
+        const transferOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        };
+  
+        fetch(url, transferOptions)
+          .then(function(rawResponse){
+            return rawResponse.json();
+          })
+          .then(function(parsedResponse){
+            console.log('powrtór',parsedResponse);
+            thisBooking.makeBooked(parsedResponse.date, parsedResponse.hour, parsedResponse.duration, parsedResponse.table);
+          });
+      }
 }
 
 export default Booking;
