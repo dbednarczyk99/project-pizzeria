@@ -3,8 +3,18 @@
   import Product from './components/Product.js';
   import Cart from './components/Cart.js';
   import Booking from './components/Booking.js';
+  import HomePage from './components/HomePage.js';
   
-  const app = {
+  const app = {    
+    
+    initHomePage: function(){
+      const thisApp = this;
+
+      //for(let tale of thisApp.data.homePageData){
+        new HomePage(thisApp.homePageData);
+              //}
+    },
+
     initPages: function(){
       const thisApp = this;
 
@@ -12,9 +22,9 @@
       thisApp.navLinks = document.querySelectorAll(select.nav.links);
 
       const idFromHash = window.location.hash.substring(2);
-      //console.log(idFromHash);
 
       let useId = thisApp.pages[0].id;
+      //console.log('useId: ', thisApp.pages)
       for(let page of thisApp.pages){
         if(page.id === idFromHash) {
           useId = page.id; 
@@ -57,7 +67,7 @@
 
     initMenu: function(){
       const thisApp = this;
-      //console.log('thisApp.data: ', thisApp.data);
+      console.log('thisApp.data: ', thisApp.data);
 
       for(let productData in thisApp.data.products){
         new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
@@ -88,6 +98,23 @@
           thisApp.initMenu();
         });
       console.log('thisApp.data', JSON.stringify(thisApp.data));
+
+      const urlHome = settings.db.url + '/' + settings.db.homePageData;
+
+      fetch(urlHome)
+        .then(function(rawResponse){
+          return rawResponse.json();
+        })
+        .then(function(parsedResponse){
+          console.log('homePage', parsedResponse);
+
+          /*save parsedResponse as thisApp.data.products */
+          thisApp.homePageData = parsedResponse;
+          //console.log('thisApp.homePageData', JSON.stringify(thisApp.homePageData));
+          /* execute initMenu method */
+          thisApp.initHomePage();
+          thisApp.initPages();
+        });
     },
 
     initBooking: function(){
@@ -110,6 +137,8 @@
       thisApp.initPages();
       thisApp.initBooking();
     },
+
+
 
     initCart: function(){
       const thisApp = this;

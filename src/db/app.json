@@ -1,4 +1,60 @@
 {
+  "homePageData": {
+    "homeTales": [
+      {
+        "link": true,
+        "class": "order",
+        "header": "ORDER ONLINE",
+        "text": "Delicious food delivered to your home",
+        "background": "image",
+        "background-value": "\u003Cimg class=\"active\" src=\"images/home-page/pizza-1.jpg\"\u003E"
+      },
+      {
+        "link": true,
+        "class": "booking",
+        "header": "BOOK A TABLE",
+        "text": "Come to us for a delicious meal",
+        "background": "image",
+        "background-value": "\u003Cimg class=\"active\" src=\"images/home-page/pizza-2.jpg\"\u003E"
+      },
+      {
+        "link": false,
+        "class": "home",
+        "header": "OPENING HOURS:",
+        "text": "TUE-SUN, 12PM - 12AM",
+        "background": "color",
+        "background-value": "$color-main"
+      }
+    ],
+    "homeCarousel": [
+      {
+        "header": "AMAZING SERVICE!",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "author": "John Doe",
+        "image":"\u003Cimg class=\"active\" src=\"images/home-page/pizza-3.jpg\"\u003E"
+      },
+      {
+        "header": "DELICIOUS FOOD!",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "author": "Amanda Doe",
+        "image":"\u003Cimg class=\"active\" src=\"images/home-page/pizza-3.jpg\"\u003E"
+      },
+      {
+        "header": "BEAUTIFUL INTERIOR!",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "author": "John Smith",
+        "image":"\u003Cimg class=\"active\" src=\"images/home-page/pizza-3.jpg\"\u003E"
+      }
+    ],
+    "homeGallery": [
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-4.jpg\"\u003E",
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-5.jpg\"\u003E",
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-6.jpg\"\u003E",
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-7.jpg\"\u003E",
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-8.jpg\"\u003E",
+      "\u003Cimg class=\"active\" src=\"images/home-page/pizza-9.jpg\"\u003E"
+    ]
+  },
   "products": [
     {
       "id": "cake",

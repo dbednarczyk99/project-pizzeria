@@ -271,16 +271,19 @@ class Booking{
           },
           body: JSON.stringify(payload),
         };
-  
-        fetch(url, transferOptions)
-          .then(function(rawResponse){
-            return rawResponse.json();
-          })
-          .then(function(parsedResponse){
-            console.log('powrtór',parsedResponse);
-            thisBooking.makeBooked(parsedResponse.date, parsedResponse.hour, parsedResponse.duration, parsedResponse.table);
-          });
-      }
+
+        if(confirm("Do you confirm your reservation?")) {
+            fetch(url, transferOptions)
+                .then(function(rawResponse){
+                return rawResponse.json();
+            })
+            .then(function(parsedResponse){
+                console.log('powrtór',parsedResponse);
+                thisBooking.makeBooked(parsedResponse.date, parsedResponse.hour, parsedResponse.duration, parsedResponse.table);
+                thisBooking.updateDOM();
+            }); 
+        }
+    }
 }
 
 export default Booking;

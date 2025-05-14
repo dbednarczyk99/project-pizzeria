@@ -3,6 +3,7 @@
       menuProduct: "#template-menu-product",
       cartProduct: '#template-cart-product',
       bookingWidget: '#template-booking-widget',
+      homePage: '#template-home',
     },
 
     containerOf: {
@@ -10,6 +11,8 @@
       cart: '#cart',
       pages: '#pages',
       booking: '.booking-wrapper',
+      home: '.home-wrapper',
+      carousel: '.main-carousel',
     },
 
     all: {
@@ -55,7 +58,7 @@
     },
 
     nav: {
-      links: '.main-nav a',
+      links: '.main-nav a, .home__intro a',
     },
 
     cart: {
@@ -121,6 +124,7 @@
       orders: 'orders',
       bookings: 'bookings',
       events: 'events',
+      homePageData: 'homePageData',
       dateStartParamKey: 'date_gte',
       dateEndParamKey: 'date_lte',
       notRepeatParam: 'repeat=false',
@@ -145,4 +149,5 @@
     menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
     cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
     bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+    homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
   };

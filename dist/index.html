@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizzeria</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="vendor/flickity.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -54,6 +55,7 @@
           </div>
         </div>
         <div class="main-nav">
+          <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
@@ -62,6 +64,9 @@
   </header>
 
   <div id="pages">
+    <section id="home">
+      <div class="home-wrapper container"></div>
+    </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -69,6 +74,55 @@
       <div class="booking-wrapper container"></div>
     </section>
   </div>
+
+  <script id="template-home" type="text/x-handlebars-template">
+    <section class="home">
+      <div class="home__intro main__section">
+        {{#each homeTales}}
+        <a class="home__box box__{{ class }}" {{#if link}}href=#{{class}}{{/if}}> 
+          <h2>{{ header }}</h2>
+          <p>{{ text }}</p>
+          {{#if link}}{{{ background-value }}}{{/if}}
+        </a>
+        {{/each}}
+      </div>
+  
+      <div class="home__carousel main__section">
+        <div class="main-carousel">
+          {{#each homeCarousel}}
+            <div class="carousel-cell">
+              <div class="carousel-cell__image">
+                {{{image}}}
+              </div>
+              <div class="carousel-cell__text">
+                <h2>{{header}}</h2>
+                <p>{{text}}</p>
+                <h4>- {{author}}</h4>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+  
+      <div class="home__gallery main__section">
+        <div class="gallery__items">
+          {{#each homeGallery}}
+            <div class="gallery__item">
+              {{{ this }}}
+              <div class="overlay">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+        <div class="gallery__link">
+          <a class="instagram__link" href="#instagram">View more on Instagram</a>
+        </div>
+      </div>
+    </section>
+  </script>
+
 
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
@@ -245,6 +299,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="vendor/flickity.pkgd.min.js"></script>
   <script src="vendor/range-slider.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>
